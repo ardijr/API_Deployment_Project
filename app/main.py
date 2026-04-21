@@ -1,3 +1,5 @@
+from turtle import pd
+
 from fastapi import FastAPI, HTTPException
 from model.predict import get_prediction
 from typing import List
