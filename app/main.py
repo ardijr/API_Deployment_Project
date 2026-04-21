@@ -25,8 +25,3 @@ def predict_proba(request: list[dict]):
         return {"prediction": result.tolist()}
     except Exception as e:
         return HTTPException(status_code=400, detail=str(e))
-    
-@app.get('/schema')
-def get_schema():
-    df = pd.read_csv('data/test_2025.csv')
-    return df.dtypes.to_dict()
